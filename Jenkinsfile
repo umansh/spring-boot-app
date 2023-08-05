@@ -1,10 +1,15 @@
 pipeline {
     agent any 
-    environment {
-        tool name: 'Java17', type: 'jdk'
-    }
+    
     
     stages{
+        stages{
+        stage("Cleanup Workspace"){
+            steps {
+                cleanWs()
+            }
+
+        }
         stage("Clone Code"){
             steps {
                 echo "Cloning the code"
