@@ -3,11 +3,6 @@ pipeline {
     
     
     stages{
-        stage("Cleanup Workspace"){
-            steps {
-                cleanWs()
-            }
-        }
         stage("Clone Code"){
             steps {
                 echo "Cloning the code"
