@@ -24,6 +24,13 @@ pipeline {
             }
 
         }
+        stage("static code analysis"){
+            steps {
+                withSonarQubeEnv(installationName: 'sonar-api', credentialsId: 'sonar-api') {
+                    sh 'mvn sonar:sonar'
+            }
+          }     
+        }
 
         
     }
