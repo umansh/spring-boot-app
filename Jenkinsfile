@@ -1,6 +1,8 @@
 pipeline {
     agent any 
-    tool name: '', type: 'jdk'
+    environment {
+        tool name: '', type: 'jdk'
+    }
     
     stages{
         stage("Clone Code"){
