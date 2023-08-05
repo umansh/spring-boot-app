@@ -13,6 +13,19 @@ pipeline {
                 git url:"https://github.com/umansh/spring-boot-app.git", branch: "main"
             }
         }
+        stage("Build Application"){
+            steps {
+                sh "mvn clean package"
+            }
+
+        }
+
+        stage("Test Application"){
+            steps {
+                sh "mvn test"
+            }
+
+        }
         
     }
 }
