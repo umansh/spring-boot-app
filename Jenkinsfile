@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     tools {
-        name: 'Java17', type: 'jdk'
+        type: 'jdk'
     }
     
     stages{
