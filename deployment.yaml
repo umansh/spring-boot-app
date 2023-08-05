@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: complete-prodcution-e2e-app
-          image: umansh/complete-prodcution-e2e-pipeline:40
+          image: umansh/complete-prodcution-e2e-pipeline:41
           resources:
             limits:
               memory: "256Mi"
